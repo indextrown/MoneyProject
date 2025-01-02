@@ -32,3 +32,6 @@
 3. **추천**:  
    - K=0.31은 **619.94%**의 누적 수익률과 **-51.54%**의 최대 손실률을 제공.  
    - 점수가 높은 K 값일수록 **수익률 대비 위험이 적음**.
+
+  
+![Unknown](https://github.com/user-attachments/assets/35ad31b4-0949-4cbb-a7b5-bdccc88e3048)
