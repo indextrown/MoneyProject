@@ -18,7 +18,7 @@ def get_balance_info(access_key, secret_key):
     for coin_balance in my_balances:
         # 코인이름(티커)
         ticker = coin_balance['currency']
-        market_ticker = f"KRW-{ticker}"
+        market_ticker = f"KRW-{ticker}/"
         
         # 해당하는 티커 무시
         # if ticker in ["KRW", "APENFT"]:
