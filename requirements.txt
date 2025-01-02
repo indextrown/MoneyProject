@@ -1,5 +1,13 @@
+# how to install
+# pip install -r requirements.txt
+
+# 비트코인 백테스팅
 pyupbit
 pandas
 numpy
 openpyxl
 matplotlib
+
+# 비트코인 자동매매
+python-dotenv
+pyupbit

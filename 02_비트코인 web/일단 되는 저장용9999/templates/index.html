@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- 코인 카드 섹션 -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">비트코인 (BTC)</h5>
+                    <h2 class="price" id="btc-price">${{ "%.2f"|format(btc_data.price) }}</h2>
+                    <p class="change {% if btc_data.change >= 0 %}positive-change{% else %}negative-change{% endif %}" id="btc-change">
+                        24h 변동: {{ "%.2f"|format(btc_data.change) }}%
+                    </p>
+                    <p class="volume-info" id="btc-volume">거래량: {{ "%.2f"|format(btc_data.volume) }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">이더리움 (ETH)</h5>
+                    <h2 class="price" id="eth-price">${{ "%.2f"|format(eth_data.price) }}</h2>
+                    <p class="change {% if eth_data.change >= 0 %}positive-change{% else %}negative-change{% endif %}" id="eth-change">
+                        24h 변동: {{ "%.2f"|format(eth_data.change) }}%
+                    </p>
+                    <p class="volume-info" id="eth-volume">거래량: {{ "%.2f"|format(eth_data.volume) }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 차트 섹션 -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="chartSelector">차트 선택:</label>
+                <select id="chartSelector" class="form-control">
+                    <option value="btc">비트코인 (BTC)</option>
+                    <option value="eth">이더리움 (ETH)</option>
+                </select>
+            </div>
+            <div class="chart-container">
+                <div class="card-body">
+                    <canvas id="priceChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <!-- 코인 카드 섹션 -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">비트코인 (BTC)</h5>
+                    <h2 class="price">${{ "%.2f"|format(btc_data.price) }}</h2>
+                    <p class="change">24h 변동: {{ "%.2f"|format(btc_data.change) }}%</p>
+                    <p>거래량: {{ "%.2f"|format(btc_data.volume) }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">이더리움 (ETH)</h5>
+                    <h2 class="price">${{ "%.2f"|format(eth_data.price) }}</h2>
+                    <p class="change">24h 변동: {{ "%.2f"|format(eth_data.change) }}%</p>
+                    <p>거래량: {{ "%.2f"|format(eth_data.volume) }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 차트 섹션 -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <canvas id="btcChart"></canvas>
+                    <canvas id="ethChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

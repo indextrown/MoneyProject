@@ -1,0 +1,171 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background: #343a40;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #272c30;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul li a {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+    background: #272c30;
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+}
+
+.row.mt-4 {
+    margin: 0 -10px;
+}
+
+.col-md-6 {
+    padding: 0 10px;
+}
+
+.card {
+    background: linear-gradient(145deg, #ffffff, #f5f7fa);
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05),
+                -5px -5px 15px rgba(255, 255, 255, 0.6);
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.1),
+                -8px -8px 20px rgba(255, 255, 255, 0.8);
+}
+
+.card-body {
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-title {
+    color: #1a1a1a;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.change {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.positive-change {
+    color: #00b894;
+}
+
+.negative-change {
+    color: #d63031;
+}
+
+.volume-info {
+    color: #636e72;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.chart-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05),
+                -5px -5px 15px rgba(255, 255, 255, 0.6);
+    padding: 5px;
+    margin-top: 30px;
+    width: 50%;
+    height: 100%;
+
+}
+
+.form-group {
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+
+.form-control {
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 12px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+    border-color: #2c3e50;
+}
+
+body {
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+@media (max-width: 468px) {
+    .card-body {
+        padding: 20px;
+    }
+    
+    .price {
+        font-size: 2rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .chart-container {
+        height: calc(100vh - 200px);
+        min-height: 300px;
+    }
+}
+
+#priceChart {
+    width: 100% !important;
+    height: 100% !important;
+}

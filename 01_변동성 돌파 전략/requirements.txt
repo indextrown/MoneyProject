@@ -1,5 +1,0 @@
-pyupbit
-pandas
-numpy
-openpyxl
-matplotlib
